@@ -10,6 +10,6 @@ Open `index.html` in a modern browser, or run `python3 -m http.server 8080` and 
 ## Hosting
 Published with GitHub Pages from the main branch/root. No real payment flow, tracking analytics or contact backend is included. The contact link opens an email application.
 
-The study room and other visual scenes are artistic illustrations rather than documentary evidence of biographical events. Projects retain their stated development status.
+The visual scenes are artistic interpretations of the story.
 
 [LinkedIn](https://www.linkedin.com/in/ronny-donkor-0a6402304/) · [Technical portfolio](https://github.com/ronnydonkor7-coder)
