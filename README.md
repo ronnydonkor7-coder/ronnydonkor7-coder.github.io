@@ -1,9 +1,15 @@
 # Ronny Donkor — Still Becoming
 
-Public website: https://ronny-donkor-still-becoming.spunkymacaw9.chatgpt.site
+Public website: https://still-becoming.ronnydonkor7.workers.dev/
 
-This repository remains private. The public frontend is hosted separately with Sites. HTML, CSS, images, and browser JavaScript are necessarily visible to visitors. Do not store credentials or private database records in frontend files.
+The complete project is preserved. This repository remains private; Cloudflare Workers serves the public static website independently of GitHub Pages.
 
-RAREST storefront: https://rarest-fashion-design-review.spunkymacaw9.chatgpt.site
+## Deployment
 
-The former GitHub Pages address is no longer the production website.
+`worker.js` serves `index.html` as a text module. Deploy from this repository using `npx wrangler deploy` with an authorized Cloudflare account. Configuration is in `wrangler.jsonc`; no credentials belong in this repository.
+
+HTML, CSS, images and browser JavaScript are necessarily visible to visitors. Server implementation and repository history remain private. This static portfolio has no database or secret bindings.
+
+RAREST storefront: https://rarestfashionofficial.com/
+
+[Hosting troubleshooting](TROUBLESHOOTING.md)
