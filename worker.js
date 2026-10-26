@@ -1,3 +1,22 @@
-import html from './index.html';
-const pages=new Set(['/','/story','/projects','/certifications','/cloud','/experience','/case-studies','/future']);
-export default {async fetch(request){const u=new URL(request.url);const headers={'Content-Type':'text/html; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin','X-Frame-Options':'DENY','Permissions-Policy':'camera=(), microphone=(), geolocation=()','Content-Security-Policy':"default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"};if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405,headers:{Allow:'GET, HEAD'}});if(u.pathname==='/index.html')return Response.redirect(u.origin+'/',301);if(u.pathname==='/robots.txt')return new Response('User-agent: *\nAllow: /\n',{headers:{'Content-Type':'text/plain'}});if(!pages.has(u.pathname))return new Response('Not found',{status:404,headers:{'Content-Type':'text/plain','X-Content-Type-Options':'nosniff'}});return new Response(request.method==='HEAD'?null:html,{headers});}};
+import home from './index.html';
+import story from './story.html';
+import projects from './projects.html';
+import certifications from './certifications.html';
+import cloud from './cloud.html';
+import experience from './experience.html';
+import caseStudies from './case-studies.html';
+import future from './future.html';
+import styles from './styles.css';
+import script from './script.js';
+const routes={'/':home,'/story':story,'/projects':projects,'/certifications':certifications,'/cloud':cloud,'/experience':experience,'/case-studies':caseStudies,'/future':future};
+export default {async fetch(request){
+ const u=new URL(request.url);
+ if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405,headers:{Allow:'GET, HEAD'}});
+ if(u.pathname==='/index.html')return Response.redirect(u.origin+'/',301);
+ if(u.pathname==='/robots.txt')return new Response('User-agent: *\nAllow: /\n',{headers:{'Content-Type':'text/plain; charset=utf-8'}});
+ const isCSS=u.pathname==='/styles.css',isJS=u.pathname==='/script.js';
+ const body=isCSS?styles:isJS?script:routes[u.pathname];
+ if(body===undefined)return new Response('Not found',{status:404,headers:{'Content-Type':'text/plain','X-Content-Type-Options':'nosniff'}});
+ const headers={'Content-Type':isCSS?'text/css; charset=utf-8':isJS?'application/javascript; charset=utf-8':'text/html; charset=utf-8','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin','X-Frame-Options':'DENY','Permissions-Policy':'camera=(), microphone=(), geolocation=()','Content-Security-Policy':"default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"};
+ return new Response(request.method==='HEAD'?null:body,{headers});
+}};
