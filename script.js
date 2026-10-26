@@ -1,0 +1,1 @@
+document.querySelectorAll('a[href]').forEach(a=>{if(a.href.startsWith('https://')&&a.hostname!==location.hostname){a.rel='noopener noreferrer'}});
