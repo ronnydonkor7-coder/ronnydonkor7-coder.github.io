@@ -1,6 +1,6 @@
 # Ronny Donkor — Still Becoming
 
-Public website: https://still-becoming.ronnydonkor7.workers.dev/
+Portfolio domain: https://ronnydonkor.com/
 
 The complete project is preserved. This repository remains private; Cloudflare Workers serves the public static website independently of GitHub Pages.
 
