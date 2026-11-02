@@ -1,0 +1,16 @@
+
+.page-security-lab .chapter-wrap.build-notes{width:100%;max-width:1060px;margin-inline:auto;padding-inline:clamp(20px,4vw,48px);box-sizing:border-box}
+.page-security-lab .chapter-opening,.page-security-lab .build-note,.page-security-lab .dashboard-proof{width:100%;max-width:none;box-sizing:border-box;margin-inline:0}
+.page-security-lab .build-note{margin-block:0 36px;padding-block:28px 0}
+.page-security-lab .build-note p{max-width:78ch}
+.page-security-lab h2{max-width:34ch}
+.page-security-lab figure{width:100%;max-width:none;margin:24px 0 36px;box-sizing:border-box}
+.page-security-lab figure img{display:block;width:100%;height:auto;max-height:640px;object-fit:contain;background:#0a1118;border:1px solid #344653;border-radius:8px;box-sizing:border-box}
+.page-security-lab figcaption{max-width:78ch;margin:12px 0 0;line-height:1.7}
+.page-security-lab details figure{margin-bottom:8px}
+.page-security-lab .sx-badge{display:flex;align-items:center;gap:18px;padding:22px 0;border-block:1px solid #29444b;margin:24px 0}
+.sx-alien{font-size:3rem;line-height:1}.sx-label{font:600 .72rem/1.6 monospace;letter-spacing:.1em;color:#a4dfc8}.sx-badge p{margin:6px 0 0;color:#b1c1cd}
+.sx-status{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.sx-status span{border:1px solid #34584e;border-radius:6px;padding:8px 12px;color:#b4e6d1;font-size:.85rem}
+.sx-workflow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}.sx-workflow>div{border:1px solid #29444b;padding:22px;border-radius:8px;min-width:0}.sx-workflow h3{margin:0 0 12px;font-size:18px}.sx-workflow p{margin:0;font-size:15px}
+.page-security-lab pre{max-width:100%;box-sizing:border-box;overflow-x:auto}.page-security-lab .eyebrow{margin-bottom:12px}
+@media(max-width:650px){.sx-workflow{grid-template-columns:1fr;gap:16px}.page-security-lab .chapter-wrap.build-notes{padding-inline:20px}.page-security-lab figure img{max-height:none}.sx-badge{gap:12px}.page-security-lab .build-note{margin-bottom:28px}.sx-workflow>div{padding:18px}}
