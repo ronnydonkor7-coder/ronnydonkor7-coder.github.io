@@ -1,15 +1,11 @@
-# Ronny Donkor — Still Becoming
+# Ronny Donkor portfolio
 
-Portfolio domain: https://ronnydonkor.com/
+Public website: https://ronnydonkor.com/
 
-The complete project is preserved. This repository remains private; Cloudflare Workers serves the public static website independently of GitHub Pages.
+This repository is public. Do not commit credentials, personal records or private deployment information.
 
-## Deployment
+The portfolio is served by Cloudflare Workers. Deployment configuration is in `wrangler.jsonc`; `worker.js` is the Worker entry point. Use an authorized Cloudflare account for deployment and review the current configuration before releasing changes.
 
-`worker.js` serves `index.html` as a text module. Deploy from this repository using `npx wrangler deploy` with an authorized Cloudflare account. Configuration is in `wrangler.jsonc`; no credentials belong in this repository.
+[Security lab write-up](https://ronnydonkor.com/projects/security-lab) · [RAREST FASHION](https://rarestfashionofficial.com/) · [Hosting troubleshooting](TROUBLESHOOTING.md)
 
-HTML, CSS, images and browser JavaScript are necessarily visible to visitors. Server implementation and repository history remain private. This static portfolio has no database or secret bindings.
-
-RAREST storefront: https://rarestfashionofficial.com/
-
-[Hosting troubleshooting](TROUBLESHOOTING.md)
+RAREST FASHION is a separate website under development.
